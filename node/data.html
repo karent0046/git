@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+
+            width: 500px;
+            height: 30px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 30px;
+
+        }
+
+    </style>
+
+</head>
+<body >
+<div id="time"><span></span></div>
+<script>
+
+    setInterval(function() {
+        var d = new Date();
+        var year = d.getFullYear();
+        var month = d.getMonth() + 1;
+        var day = d.getDay();
+        var dd = d.getDate();
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+        document.getElementById("time").innerHTML = year + "年" + month + "月" + dd + "日  " + "星期" + day + " " + h + "点" + m + "分" + s + "秒";
+
+    },1000);
+
+</script>
+
+</body>
+</html>
